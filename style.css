@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f2f2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h1 {
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+  font-size: 3rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.fig {
+  position: relative;
+  width: 32%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  
+}
+
+.fig img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 20px #333;
+  filter: grayscale(100%);
+
+}
+
+.fig:hover {
+  transform: scale(1.03);
+
+  transition: 0.5s;
+  filter: drop-shadow(0 0 10px rgb(47, 47, 47));
+}
+
+.fig:hover img {
+  filter: grayscale(0%);
+}
+
+.fig figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20%;
+  width: 100%;
+  padding: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%,rgba(255, 255, 255, 0) 100%);
+}
+
+.fig:hover figcaption {
+  /* transition: 0.5s; */
+  transform: scale(1.03);
+  opacity: 1;
+}
